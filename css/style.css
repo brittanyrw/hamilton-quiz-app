@@ -10,8 +10,8 @@ body {
   background: #F5EEDD;
   font-family: "Arsenal", sans-serif; }
 
-img {
-  width: 400px; }
+.start-image {
+  display: inline-block; }
 
 h1 {
   font-family: "Amatic SC", cursive;
