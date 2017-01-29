@@ -2,19 +2,38 @@
 <html>
 <head>
 	<title>Hamilton Quiz App</title>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Arsenal:400,700|Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<section class="quiz-start">
+	<!-- <section class="quiz-start">
 		<h1>How Well Do You Know Hamilton?</h1>
-		<div class="placeholder"></div>
-		<div class="placeholder"></div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus ante vel lectus gravida semper. Donec eros magna, posuere ac tempus et, gravida vel libero. Nunc malesuada posuere metus, sit amet efficitur elit condimentum ut. Curabitur sit amet tincidunt libero. </p>
-		<button type="submit" class="start">Start!</button>
-	</section>
-	<section class="score"></section> <!-- on right -->
-	<section class="remaining-questions"></section> <!-- on right -->
-	<section class="questions"></section> <!-- on right -->
+		<img src="imgs/placeholderimage.png">
+		<p>Ladies and gentlemen, are you ready for a cabinet battle quiz? This quiz will challenge your knowledge of the music, cast and more! Collect cabinet votes for every correct answer. With enough votes, you can defeat Thomas Jefferson. </p>
+		<button type="submit" class="start">START</button> 
+	</section>  -->
+
+	<section class="question-view">
+		<section class="remaining-questions">
+			<p>There are <span>###</span> rounds remaining.</p>
+		</section> 
+		<div class="placeholder">image here</div>
+		<section class="questions">
+			<div class="dislayed-question">
+				<h1 class="question-header"><span class="question-number">1</span>How many words are in the musical?</h1>
+				<ul>
+					<li>20,500</li>
+					<li>20,250</li>
+					<li>21,000</li>
+					<li>20,000</li>
+				</ul>
+			</div> 
+		</section> 
+		<section class="score"><span class="correct">&#10004</span><span class="incorrect">&#10008</span></section> 
+	</section> 
+
 </body>
 </html>
+
+<!-- images in the middle -->
