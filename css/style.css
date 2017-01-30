@@ -11,7 +11,7 @@ body {
   font-family: "Arsenal", sans-serif; }
 
 .start-image {
-  width: 100%; }
+  width: 70%; }
 
 h1 {
   font-family: "Amatic SC", cursive;
@@ -43,7 +43,7 @@ button {
 .dislayed-question li {
   display: inline-block;
   border: 1px solid #1C1711;
-  width: 45%;
+  width: 44%;
   margin: 5px 10px;
   padding: 10px 0; }
 
@@ -56,6 +56,9 @@ button {
   color: #FFF;
   padding: 5px;
   margin-right: 10px; }
+
+.questions li:hover {
+  border: 2px solid #4964BB; }
 
 .score {
   width: 50%;

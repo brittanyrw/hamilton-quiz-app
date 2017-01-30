@@ -25,7 +25,7 @@ body {
 }
 
 .start-image {
-	width: 100%;
+	width: 70%;
 }
 
 h1 {
@@ -62,7 +62,7 @@ button {
 .dislayed-question li {
 	display: inline-block;
 	border: 1px solid $dark-gray;
-	width: 45%;
+	width: 44%;
 	margin: 5px 10px;
 	padding: 10px 0;
 }
@@ -77,6 +77,10 @@ button {
 	color: $white;
 	padding: 5px;
 	margin-right: 10px;
+}
+
+.questions li:hover {
+	border: 2px solid $blue;
 }
 
 .score {
