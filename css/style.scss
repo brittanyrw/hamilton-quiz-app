@@ -19,13 +19,13 @@ ul {
 }
 body {
 	text-align: center;
-	margin: 10% auto;
+	margin: 5% auto;
 	background: $tan;
 	font-family: $Sans;
 }
 
 .start-image {
-	display: inline-block;
+	width: 100%;
 }
 
 h1 {
@@ -109,4 +109,8 @@ button {
 	margin: 10px auto;
 	padding: 0 20px;
 	background-color: lighten($tan, 50%);
+}
+
+.hide {
+	display: none;
 }

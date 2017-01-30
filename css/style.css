@@ -6,12 +6,12 @@ ul {
 
 body {
   text-align: center;
-  margin: 10% auto;
+  margin: 5% auto;
   background: #F5EEDD;
   font-family: "Arsenal", sans-serif; }
 
 .start-image {
-  display: inline-block; }
+  width: 100%; }
 
 h1 {
   font-family: "Amatic SC", cursive;
@@ -84,5 +84,8 @@ button {
   margin: 10px auto;
   padding: 0 20px;
   background-color: white; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
