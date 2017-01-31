@@ -1,5 +1,6 @@
 /* COLORS */
 /* FONTS */
+/* GENERAL */
 ul {
   margin: 0;
   padding: 0; }
@@ -10,13 +11,17 @@ body {
   background: #F5EEDD;
   font-family: "Arsenal", sans-serif; }
 
-.start-image {
-  width: 70%; }
-
 h1 {
   font-family: "Amatic SC", cursive;
   font-size: 3em;
   margin: 0; }
+
+.hide {
+  display: none; }
+
+/* QUIZ START */
+.start-image {
+  width: 70%; }
 
 .quiz-start {
   width: 60%;
@@ -25,7 +30,7 @@ h1 {
   padding: 20px;
   background: #FFF; }
 
-button {
+.start {
   height: 50px;
   width: 200px;
   font-size: 20px;
@@ -33,6 +38,7 @@ button {
   color: #FFF;
   border: none; }
 
+/* QUESTION VIEW */
 .questions {
   width: 50%;
   margin: auto;
@@ -58,7 +64,8 @@ button {
   margin-right: 10px; }
 
 .questions li:hover {
-  border: 2px solid #4964BB; }
+  background: #6e84c9;
+  color: #FFF; }
 
 .score {
   width: 50%;
@@ -81,14 +88,15 @@ button {
   font-size: 35px;
   padding: 5px; }
 
-.placeholder {
-  height: 100px;
-  width: 50%;
+.next-question {
+  width: 20%;
+  color: #FFF;
   margin: 10px auto;
-  padding: 0 20px;
-  background-color: white; }
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background: #1C1711; }
 
-.hide {
-  display: none; }
+/* QUIZ END */
 
 /*# sourceMappingURL=style.css.map */

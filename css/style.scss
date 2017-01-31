@@ -13,6 +13,8 @@ $Marker: 'Permanent Marker', cursive;
 $Sans: 'Arsenal', sans-serif;
 $Writing: 'Amatic SC', cursive;
 
+/* GENERAL */
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -24,14 +26,20 @@ body {
 	font-family: $Sans;
 }
 
-.start-image {
-	width: 70%;
-}
-
 h1 {
 	font-family: $Writing;
 	font-size: 3em;
 	margin: 0;
+}
+
+.hide {
+	display: none;
+}
+
+/* QUIZ START */
+
+.start-image {
+	width: 70%;
 }
 
 .quiz-start {
@@ -42,7 +50,8 @@ h1 {
 	background: $white;
 }
 
-button {
+
+.start {
 	height: 50px;
 	width: 200px;
 	font-size: 20px;
@@ -50,6 +59,8 @@ button {
 	color: $white;
 	border: none;
 }
+
+/* QUESTION VIEW */
 
 .questions {
 	width: 50%;
@@ -80,7 +91,8 @@ button {
 }
 
 .questions li:hover {
-	border: 2px solid $blue;
+	background: lighten($blue, 10%);
+	color: $white;
 }
 
 .score {
@@ -107,14 +119,23 @@ button {
 	padding: 5px;
 }
 
-.placeholder {
-	height: 100px;
-	width: 50%;
+.next-question {
+	width: 20%;
+	color: $white;
 	margin: 10px auto;
-	padding: 0 20px;
-	background-color: lighten($tan, 50%);
+	padding: 10px;
+	font-size: 20px;
+	border: none;
+	background: $dark-gray;
 }
 
-.hide {
-	display: none;
-}
+/* QUIZ END */
+
+
+
+
+
+
+
+
+

@@ -7,31 +7,43 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<!-- QUIZ START PAGE -->
 	<section class="quiz-start">
 		<h1>How Well Do You Know Hamilton?</h1>
 		<img src="imgs/quiz-start-image.png" class="start-image">
 		<p>Ladies and gentlemen, are you ready for a cabinet battle quiz? This quiz will challenge your knowledge of the music, cast and more! Collect cabinet votes for every correct answer. With enough votes, you can defeat Thomas Jefferson. </p>
 		<button type="submit" class="start">START</button> 
 	</section>  
+	<!-- END QUIZ START PAGE -->
 
+	<!-- QUESTION VIEW -->
 	<section class="question-view hide">
 		<section class="remaining-questions">
-			<p>There are <span>###</span> questions remaining.</p>
+			<p>There are <span class="remaining-questions-number">###</span> questions remaining.</p>
 		</section> 
-		<div class="placeholder">image here</div>
 		<section class="questions">
 			<div class="dislayed-question">
-				<h1 class="question-header"><span class="question-number">1</span>How many words are in the musical?</h1>
-				<ul>
-					<li>20,500</li>
-					<li>20,250</li>
-					<li>21,000</li>
-					<li>20,000</li>
-				</ul>
+				<h1 class="question-header">
+					<span class="question-number"></span>
+				</h1>
+				<ul class="choices"></ul>
+				<button type="submit" class="next-question">NEXT</button> <!-- add hide button -->
 			</div> 
 		</section> 
-		<section class="score"><span class="correct">&#10004</span><span class="incorrect">&#10008</span></section> 
-	</section>
+		<section class="score">
+			<section class="feedback"></section>
+		</section> 
+	<!-- END QUESTION VIEW -->
+	<!-- QUIZ END PAGE 
+	<section class="quiz-end">
+		<h1>You Scored 2 out of 10! Bummer, better luck next time</h1>
+		<button type="submit" class="restart">TRY AGAIN</button>
+		<div class="social">
+			<img src="" alt="twitter">
+			<img src="" alt="medium">
+			<img src="" alt="github">
+		</div>
+	</section> -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="app.js" type="text/javascript"></script>
 </body>
