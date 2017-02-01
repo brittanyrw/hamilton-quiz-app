@@ -54,14 +54,18 @@ h1 {
   padding: 10px 0; }
 
 .question-header {
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  display: inline-block; }
 
 .question-number {
   background-color: #4964BB;
   border-radius: 50%;
   color: #FFF;
   padding: 5px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  font-family: "Amatic SC", cursive;
+  font-size: 3em;
+  display: inline-block; }
 
 .questions li:hover {
   background: #6e84c9;
