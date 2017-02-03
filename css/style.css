@@ -78,6 +78,10 @@ h1 {
   background: #5c74c2;
   color: #FFF; }
 
+.correct {
+  border: 1px solid green;
+  background: green; }
+
 .score {
   width: 50%;
   margin: 10px auto;

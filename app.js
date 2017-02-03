@@ -37,8 +37,7 @@ $(document).ready(function() {
 					$(".score-display").text("Let's raise a glass to freedom, you won " + state.score + " votes out of " + state.questions.length + "! You defeated Jefferson.");
 				} else if (state.score >= 8) {
 					$(".score-display").text("Wow, you amaze and astonish! You won " + state.score + " votes out of " + state.questions.length + "! You crushed Jefferson in this battle!");
-				}
-				
+				}	
 			}
 		});
 
@@ -76,11 +75,14 @@ function checkAnswer(guess){
 		state.current++;
 	} else {
 		$(".feedback").append(
-		"<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>");
+		"<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>" +
+		"<p>" + "The correct response is: " + state.questions[state.current].choices[state.questions[state.current].correct] + "</p>");
 		state.current++; 
+
 	}
 
 }
+
 
 var state = {
 	current: 0,
