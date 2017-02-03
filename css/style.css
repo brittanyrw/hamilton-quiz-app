@@ -14,7 +14,8 @@ body {
 h1 {
   font-family: "Amatic SC", cursive;
   font-size: 3em;
-  margin: 0; }
+  margin: 0;
+  display: inline; }
 
 .hide {
   display: none; }
@@ -26,9 +27,10 @@ h1 {
 .quiz-start {
   width: 60%;
   margin: 0 auto;
-  border: 2px solid #1C1711;
   padding: 20px;
-  background: #FFF; }
+  background: #FFF;
+  outline: 10px solid #FFF;
+  border: 2px solid #1C1711; }
 
 .start {
   height: 50px;
@@ -36,15 +38,16 @@ h1 {
   font-size: 20px;
   background: #ED2835;
   color: #FFF;
-  border: none; }
+  border: 2px solid #1C1711; }
 
 /* QUESTION VIEW */
 .questions {
   width: 50%;
   margin: auto;
-  border: 2px solid #1C1711;
   padding: 20px;
-  background: #FFF; }
+  background: #FFF;
+  outline: 10px solid #FFF;
+  border: 2px solid #1C1711; }
 
 .dislayed-question li {
   display: inline-block;
@@ -54,38 +57,41 @@ h1 {
   padding: 10px 0; }
 
 .question-header {
-  margin: 0 0 20px 0;
-  display: inline-block; }
+  margin: 0 0 20px 0; }
 
 .question-number {
   background-color: #4964BB;
   border-radius: 50%;
   color: #FFF;
-  padding: 5px;
+  padding: 5px 20px;
   margin-right: 10px;
   font-family: "Amatic SC", cursive;
   font-size: 3em;
-  display: inline-block; }
+  display: inline; }
 
 .questions li:hover {
   background: #6e84c9;
   color: #FFF; }
 
+.questions li.chosen {
+  background: #5c74c2;
+  color: #FFF; }
+
 .score {
   width: 50%;
   margin: 10px auto;
-  border: 2px solid #1C1711;
   padding: 20px;
-  background: #ED2835; }
+  background: #ED2835;
+  border: 2px solid #1C1711; }
 
 .remaining-questions {
   width: 50%;
   color: #FFF;
   margin: 10px auto;
-  border: 2px solid #1C1711;
   padding: 0 20px;
   background: #4964BB;
-  font-size: 20px; }
+  font-size: 20px;
+  border: 2px solid #1C1711; }
 
 .correct, .incorrect {
   color: #FFF;
@@ -100,6 +106,10 @@ h1 {
   font-size: 20px;
   border: none;
   background: #1C1711; }
+
+.feedback {
+  color: #FFF;
+  font-size: 20px; }
 
 /* QUIZ END */
 

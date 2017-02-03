@@ -15,6 +15,14 @@ $Writing: 'Amatic SC', cursive;
 
 /* GENERAL */
 
+@mixin outline {
+	outline: 10px solid $white;
+}
+
+@mixin borderdark {
+	border: 2px solid $dark-gray;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -30,6 +38,7 @@ h1 {
 	font-family: $Writing;
 	font-size: 3em;
 	margin: 0;
+	display: inline;
 }
 
 .hide {
@@ -45,9 +54,10 @@ h1 {
 .quiz-start {
 	width: 60%;
 	margin: 0 auto;
-	border: 2px solid $dark-gray;
 	padding: 20px;
 	background: $white;
+	@include outline;
+	@include borderdark;
 }
 
 
@@ -57,7 +67,8 @@ h1 {
 	font-size: 20px;
 	background: $red;
 	color: $white;
-	border: none;
+	@include borderdark;
+
 }
 
 /* QUESTION VIEW */
@@ -65,9 +76,10 @@ h1 {
 .questions {
 	width: 50%;
 	margin: auto;
-	border: 2px solid $dark-gray;
 	padding: 20px;
 	background: $white;
+	@include outline;
+	@include borderdark;
 }
 
 .dislayed-question li {
@@ -80,18 +92,17 @@ h1 {
 
 .question-header {
 	margin: 0 0 20px 0;
-	display: inline-block;
 }
 
 .question-number {
 	background-color: $blue;
 	border-radius: 50%;
 	color: $white;
-	padding: 5px;
+	padding: 5px 20px;
 	margin-right: 10px;
 	font-family: $Writing;
 	font-size: 3em;
-	display: inline-block;
+	display: inline;
 }
 
 .questions li:hover {
@@ -99,22 +110,27 @@ h1 {
 	color: $white;
 }
 
+.questions li.chosen {
+	background: lighten($blue, 5%);
+	color: $white;
+}
+
 .score {
 	width: 50%;
 	margin: 10px auto;
-	border: 2px solid $dark-gray;
 	padding: 20px;
 	background: $red;
+	@include borderdark;
 }
 
 .remaining-questions {
 	width: 50%;
 	color: $white;
 	margin: 10px auto;
-	border: 2px solid $dark-gray;
 	padding: 0 20px;
 	background: $blue;
 	font-size: 20px;
+	@include borderdark;
 }
 
 .correct, .incorrect {
@@ -131,6 +147,11 @@ h1 {
 	font-size: 20px;
 	border: none;
 	background: $dark-gray;
+}
+
+.feedback {
+	color: $white;
+	font-size: 20px;
 }
 
 /* QUIZ END */
