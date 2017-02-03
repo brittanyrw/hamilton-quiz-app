@@ -17,13 +17,21 @@ $(document).ready(function() {
 		});
 
 		//when next is clicked, hide next button, hide feedback, clear feedback
+		
 		$(".next-question").click(function(event) {
-			$(".next-question").addClass("hide");
-			$(".feedback").html('');
-			$(".score").addClass("hide");
-			$(".remaining-questions").html('');
-			showQuestion();
+			if ((state.current) != state.questions.length) {
+				$(".next-question").addClass("hide");
+				$(".feedback").html('');
+				$(".score").addClass("hide");
+				$(".remaining-questions").html('');
+				showQuestion();
+				//when last question is reached, show quiz end page
+			} else {
+				$(".quiz-end").removeClass("hide");
+			}
 		});
+
+		
 		
 	});
 
@@ -48,7 +56,8 @@ function checkAnswer(guess){
 		state.current++;
 	} else {
 		$(".feedback").append(
-		"<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>"); 
+		"<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>");
+		state.current++; 
 	}
 
 }
