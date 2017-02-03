@@ -15,18 +15,6 @@ $Writing: 'Amatic SC', cursive;
 
 /* GENERAL */
 
-.fa {
-	color: $dark-gray;
-	padding: 5px;
-}
-
-.fa:hover {
-		background: $dark-gray;
-		color: white;
-		padding: 10px 10px;
-		border-radius: 50%;
-}
-
 
 @mixin outline {
 	outline: 10px solid $white;
@@ -37,7 +25,7 @@ $Writing: 'Amatic SC', cursive;
 }
 
 ul {
-	margin: 0;
+	margin: 20px 0 0 0;
 	padding: 0;
 }
 body {
@@ -50,7 +38,6 @@ body {
 h1 {
 	font-family: $Writing;
 	font-size: 3em;
-	margin: 0;
 	display: inline;
 }
 
@@ -64,7 +51,7 @@ h1 {
 	width: 70%;
 }
 
-.quiz-start {
+.quiz-start, .quiz-end {
 	width: 60%;
 	margin: 0 auto;
 	padding: 20px;
@@ -74,13 +61,15 @@ h1 {
 }
 
 
-.start {
+.start, .restart{
 	height: 50px;
 	width: 200px;
+	margin: 15px auto;
 	font-size: 20px;
 	background: $red;
 	color: $white;
 	@include borderdark;
+	display: block;
 
 }
 
@@ -169,8 +158,14 @@ h1 {
 
 /* QUIZ END */
 
+.fa {
+	color: $dark-gray;
+	padding: 5px;
+}
 
-
+.fa:hover {
+		color: $blue;
+}
 
 
 
