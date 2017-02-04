@@ -1,5 +1,4 @@
 $(document).ready(function() {
-		// hide quiz start view when submit button is clicked, show quiz question page
 		$(".start").click(function(event) {
 			$(".quiz-start").hide();
 			$(".question-view").removeClass("hide");
@@ -15,8 +14,6 @@ $(document).ready(function() {
 				$(".next-question").removeClass("hide");
 			} 
 		});
-
-		//when next is clicked, hide next button, hide feedback, clear feedback
 		
 		$(".next-question").click(function(event) {
 			if ((state.current) != state.questions.length) {
@@ -25,7 +22,6 @@ $(document).ready(function() {
 				$(".score").addClass("hide");
 				$(".remaining-questions").html('');
 				showQuestion();
-				//when last question is reached, show quiz end page
 			} else {
 				$(".question-view").addClass("hide");
 				$(".quiz-end").removeClass("hide");
@@ -41,7 +37,6 @@ $(document).ready(function() {
 			}
 		});
 
-		//when try again is clicked, bring up quiz start page
 		$(".restart").click(function(event) {
 			state.current = 0;
 			state.score = 0;
@@ -77,9 +72,7 @@ function checkAnswer(guess){
 		$(".feedback").append("<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>" + "<p>" + "The correct response is: " + state.questions[state.current].choices[state.questions[state.current].correct] + "</p>");
 		$(".feedback p:nth-child(2)").addClass("bold");
 		state.current++; 
-
 	}
-
 }
 
 

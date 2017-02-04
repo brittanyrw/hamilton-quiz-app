@@ -1,13 +1,9 @@
-
-/* COLORS */
 $blue: #4964BB;
 $tan: #F5EEDD;
 $red: #ED2835;
 $dark-gray: #1C1711;
 $dark-blue: #283044;
 $white: #FFF;
-
-/* FONTS */
 
 $Marker: 'Permanent Marker', cursive;
 $Sans: 'Arsenal', sans-serif;
@@ -119,11 +115,6 @@ h1 {
 .questions li.chosen {
 	background: lighten($blue, 5%);
 	color: $white;
-}
-
-.correct {
-	border: 1px solid green;
-	background: green;
 }
 
 .score {
