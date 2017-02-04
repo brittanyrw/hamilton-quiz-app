@@ -71,12 +71,11 @@ h1 {
   font-size: 3em;
   display: inline; }
 
-.questions li:hover {
+.questions li.chosen {
   background: #6e84c9;
   color: #FFF; }
-
-.questions li.chosen {
-  background: #5c74c2;
+.questions li.correct-answer {
+  background: #2ECC71;
   color: #FFF; }
 
 .score {

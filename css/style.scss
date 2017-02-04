@@ -2,10 +2,9 @@ $blue: #4964BB;
 $tan: #F5EEDD;
 $red: #ED2835;
 $dark-gray: #1C1711;
-$dark-blue: #283044;
 $white: #FFF;
+$green: #2ECC71;
 
-$Marker: 'Permanent Marker', cursive;
 $Sans: 'Arsenal', sans-serif;
 $Writing: 'Amatic SC', cursive;
 
@@ -107,14 +106,19 @@ h1 {
 	display: inline;
 }
 
-.questions li:hover {
-	background: lighten($blue, 10%);
-	color: $white;
-}
+.questions {
+	li {
 
-.questions li.chosen {
-	background: lighten($blue, 5%);
-	color: $white;
+		&.chosen {
+			background: lighten($blue, 10%);
+			color: $white;
+		}
+
+		&.correct-answer {
+			background: $green;
+			color: $white;
+		}
+	}
 }
 
 .score {
