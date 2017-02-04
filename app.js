@@ -94,7 +94,7 @@ var state = {
     	correct: 1
     },{
 		text: "Out of the following cast members, who is the youngest?",
-		choices: ["Phillipa Soo", "Jasmine Cephas Jones", "Anthony Ramos", "Okieriete Onaodowan"],
+		choices: ["Phillipa Soo", "Jasmine Cephas Jones", "Anthony Ramos", "Oak Onaodowan"],
 		correct: 2
     },
     {
