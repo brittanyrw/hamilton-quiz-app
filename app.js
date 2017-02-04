@@ -20,8 +20,8 @@ var state = {
 		correct: 2
     },
     {
-		text: "Which musical did Lin Manuel Miranda not appear in?",
-		choices: ["21 Chump Street", "Bring It On", "Tick, Tick...Boom!", "Merrily We Roll Along"],
+		text: "Which show did Lin Manuel Miranda not act in?",
+		choices: ["21 Chump Street", "Bring It On the Musical", "Tick, Tick...Boom!", "In the Heights"],
 		correct: 1
     },
     {
