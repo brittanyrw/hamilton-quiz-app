@@ -1,81 +1,3 @@
-$(document).ready(function() {
-		$(".start").click(function(event) {
-			$(".quiz-start").hide();
-			$(".question-view").removeClass("hide");
-			event.preventDefault();
-			showQuestion();
-		});
-
-		$('.choices').on('click','li',function(){
-			if(!$('li.chosen').length){
-				var guess = $(this).attr('id');
-				$(this).addClass('chosen');
-				checkAnswer(guess);
-				$(".next-question").removeClass("hide");
-			} 
-		});
-		
-		$(".next-question").click(function(event) {
-			if ((state.current) != state.questions.length) {
-				$(".next-question").addClass("hide");
-				$(".feedback").html('');
-				$(".score").addClass("hide");
-				$(".remaining-questions").html('');
-				showQuestion();
-			} else {
-				$(".question-view").addClass("hide");
-				$(".quiz-end").removeClass("hide");
-				if (state.score < 5) {
-					$(".score-display").text("Nice try, but you didn't bring the thunder. You won " + state.score + " vote(s) out of " + state.questions.length + "! Jefferson wins this battle.");
-				} else if (state.score == 5) {
-					$(".score-display").text("Wow, you never back down! You won " + state.score + " votes out of " + state.questions.length + "! It's a tie with Jefferson this time!");
-				} else if (state.score > 5 && state.score < 8) {
-					$(".score-display").text("Let's raise a glass to freedom, you won " + state.score + " votes out of " + state.questions.length + "! You defeated Jefferson.");
-				} else if (state.score >= 8) {
-					$(".score-display").text("Wow, you amaze and astonish! You won " + state.score + " votes out of " + state.questions.length + "! You crushed Jefferson in this battle!");
-				}	
-			}
-		});
-
-		$(".restart").click(function(event) {
-			state.current = 0;
-			state.score = 0;
-			$(".quiz-end").addClass("hide");
-			$(".score").addClass("hide");
-			$(".feedback").html('');
-			$(".remaining-questions").html('');
-			$(".quiz-start").show();
-		});
-		
-	});
-
-function showQuestion(){
-	var currentQuestionNumber = (state.current + 1)
-	$(".question-header").text(state.questions[state.current].text); 
-	$(".question-number").text(currentQuestionNumber); 
-	$(".question-image").attr( "src", state.questions[state.current].image);
-	$(".remaining-questions").append("<p>" + (state.questions.length-currentQuestionNumber) + " question(s) remaining." + "</p>");
-	$(".choices").html('');
-	for (var i = 0; i < state.questions[state.current].choices.length; i++) {
-		$(".choices").append('<li id="'+i+'">'+state.questions[state.current].choices[i]+'</li>');
-	}
-}
-
-function checkAnswer(guess){
-	$(".score").removeClass("hide");
-	if (guess == state.questions[state.current].correct) {
-		$(".feedback").append(
-		"<p>" + state.correctFeedback[Math.floor(Math.random()*state.correctFeedback.length)] + "</p>"); 
-		state.score++;
-		state.current++;
-	} else {
-		$(".feedback").append("<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>" + "<p>" + "The correct response is: " + state.questions[state.current].choices[state.questions[state.current].correct] + "</p>");
-		$(".feedback p:nth-child(2)").addClass("bold");
-		state.current++; 
-	}
-}
-
-
 var state = {
 	current: 0,
   questions: [
@@ -130,8 +52,82 @@ var state = {
 };
 
 
+$(document).ready(function() {
+	$(".start").click(function(event) {
+		$(".quiz-start").hide();
+		$(".question-view").removeClass("hide");
+		event.preventDefault();
+		showQuestion();
+	});
 
+	$('.choices').on('click','li',function(){
+		if(!$('li.chosen').length){
+			var guess = $(this).attr('id');
+			$(this).addClass('chosen');
+			checkAnswer(guess);
+			$(".next-question").removeClass("hide");
+		} 
+	});
+	
+	$(".next-question").click(function(event) {
+		if ((state.current) != state.questions.length) {
+			$(".next-question").addClass("hide");
+			$(".feedback").html('');
+			$(".score").addClass("hide");
+			$(".remaining-questions").html('');
+			showQuestion();
+		} else {
+			$(".question-view").addClass("hide");
+			$(".quiz-end").removeClass("hide");
+			if (state.score == 1) {
+				$(".score-display").text("Nice try, but you didn't bring the thunder. You won " + state.score + " vote out of " + state.questions.length + "! Jefferson wins this battle.");
+			} else if (state.score < 5 || state.score == 0) {
+				$(".score-display").text("Nice try, but you didn't bring the thunder. You won " + state.score + " votes out of " + state.questions.length + "! Jefferson wins this battle.");
+			} else if (state.score == 5) {
+				$(".score-display").text("Wow, you never back down! You won " + state.score + " votes out of " + state.questions.length + "! It's a tie with Jefferson this time!");
+			} else if (state.score > 5 && state.score < 8) {
+				$(".score-display").text("Let's raise a glass to freedom, you won " + state.score + " votes out of " + state.questions.length + "! You defeated Jefferson.");
+			} else if (state.score >= 8) {
+				$(".score-display").text("Wow, you amaze and astonish! You won " + state.score + " votes out of " + state.questions.length + "! You crushed Jefferson in this battle!");
+			}	
+		}
+	});
 
+	$(".restart").click(function(event) {
+		state.current = 0;
+		state.score = 0;
+		$(".quiz-end").addClass("hide");
+		$(".score").addClass("hide");
+		$(".feedback").html('');
+		$(".remaining-questions").html('');
+		$(".quiz-start").show();
+	});
+	
+});
 
+function showQuestion(){
+	var currentQuestionNumber = (state.current + 1)
+	$(".question-header").text(state.questions[state.current].text); 
+	$(".question-number").text(currentQuestionNumber); 
+	$(".question-image").attr( "src", state.questions[state.current].image);
+	$(".remaining-questions").append("<p>" + (state.questions.length-currentQuestionNumber) + " question(s) remaining." + "</p>");
+	$(".choices").html('');
+	for (var i = 0; i < state.questions[state.current].choices.length; i++) {
+		$(".choices").append('<li id="'+i+'">'+state.questions[state.current].choices[i]+'</li>');
+	}
+}
 
-
+function checkAnswer(guess){
+	$(".score").removeClass("hide");
+	if (guess == state.questions[state.current].correct) {
+		$(".feedback").append(
+		"<p>" + state.correctFeedback[Math.floor(Math.random()*state.correctFeedback.length)] + "</p>"); 
+		state.score++;
+		state.current++;
+	} else {
+		$('#'+state.questions[state.current].correct).addClass('correct-answer');
+		$(".feedback").append("<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>" + "<p>" + "The correct response is: " + state.questions[state.current].choices[state.questions[state.current].correct] + "</p>");
+		$(".feedback p:nth-child(2)").addClass("bold");
+		state.current++; 
+	}
+}
