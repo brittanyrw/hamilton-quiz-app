@@ -26,7 +26,7 @@ $(document).ready(function() {
 				$(".question-view").addClass("hide");
 				$(".quiz-end").removeClass("hide");
 				if (state.score < 5) {
-					$(".score-display").text("Nice try, but you didn't bring the thunder. You won " + state.score + " votes out of " + state.questions.length + "! Jefferson wins this battle.");
+					$(".score-display").text("Nice try, but you didn't bring the thunder. You won " + state.score + " vote(s) out of " + state.questions.length + "! Jefferson wins this battle.");
 				} else if (state.score == 5) {
 					$(".score-display").text("Wow, you never back down! You won " + state.score + " votes out of " + state.questions.length + "! It's a tie with Jefferson this time!");
 				} else if (state.score > 5 && state.score < 8) {
