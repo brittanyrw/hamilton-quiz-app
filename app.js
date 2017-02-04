@@ -119,7 +119,7 @@ var state = {
     	choices: ["Drop, beat", "Stop, burn", "Stop, beat", "Drop, burn"],
     	correct: 3
     },{
-    	text: "In 2015, which Off-Broadway theater was the show performed?",
+    	text: "In 2015, in which Off-Broadway theater was the show performed?",
     	choices: ["The Players Theatre", "The Palace Theatre", "Public Theater", "Richard Rodgers Theatre"],
     	correct: 2
     }
