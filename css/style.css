@@ -16,6 +16,9 @@ h1 {
   font-size: 3em;
   display: inline; }
 
+.bold {
+  font-weight: 700; }
+
 .hide {
   display: none; }
 

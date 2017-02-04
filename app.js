@@ -74,9 +74,8 @@ function checkAnswer(guess){
 		state.score++;
 		state.current++;
 	} else {
-		$(".feedback").append(
-		"<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>" +
-		"<p>" + "The correct response is: " + state.questions[state.current].choices[state.questions[state.current].correct] + "</p>");
+		$(".feedback").append("<p>" + state.incorrectFeedback[Math.floor(Math.random()*state.incorrectFeedback.length)] + "</p>" + "<p>" + "The correct response is: " + state.questions[state.current].choices[state.questions[state.current].correct] + "</p>");
+		$(".feedback p:nth-child(2)").addClass("bold");
 		state.current++; 
 
 	}
